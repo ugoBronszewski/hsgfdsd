@@ -1,0 +1,43 @@
+.modal {
+    &.modal-cookies {
+        display: block;
+        top: 50px !important;
+        left: 50px !important;
+        padding: 50px;
+        max-width: 40%;
+        height: auto;
+        background-color: hsl(0, 73%, 39%);
+        //background-color: hsl(240, 34%, 34%);
+
+        .modal-close {
+            position: absolute;
+            top: 25px;
+            right: 25px;
+            cursor: pointer;
+
+            .feather {
+                stroke: $white;
+            }
+        }
+
+        .title {
+            margin-bottom: 12px;
+            color: $white;
+            font-size: 24px;
+        }
+
+        p {
+            margin: 25px 0;
+            color: hsl(48, 100%, 85%);
+            //color: hsl(180, 100%, 85%);
+            line-height: 1.4;
+        }
+
+        .btn {
+            margin-right: 25px;
+            color: hsl(240, 34%, 34%);
+            font-weight: 600;
+            background-color: $white;
+        }
+    }
+}

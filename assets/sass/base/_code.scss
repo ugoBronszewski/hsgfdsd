@@ -1,0 +1,30 @@
+code, pre,
+var, kbd, samp {
+  font-family: 'Ubuntu Mono', monospace;
+}
+
+code {
+  color: $pink;
+  word-break: break-word;
+}
+
+pre {
+  & code {
+    color: inherit;
+  }
+}
+
+var {
+  font-style: italic;
+}
+
+kbd {
+  padding: .2rem .4rem;
+  color: $white;
+  background-color: $dark-grey;
+  border-radius: .2rem;
+
+  & kbd {
+    padding: 0 0;
+  }
+}

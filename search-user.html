@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>FormaRecap</title>
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="/assets/css/style.css">
+
+        <script src="https://unpkg.com/feather-icons"></script>
+    </head>
+    <body>
+        <nav class="navbar navbar-transparent bg-transparent">
+            <div class="container">
+                <a class="navbar-brand" href="/">
+                    <img src="/assets/images/logo-formarecap.svg" class="d-inline-block align-top" alt="">
+                </a>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Revenir à l'accueil</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <section class="section section-search">
+            <div class="container">
+                <div class="row">
+                    <div class="col-7">
+                        <h2 class="h-white">Trouver un agent</h2>
+                        <form action="" class="search">
+                            <input type="text" placeholder="Tapez les premières lettre du nom de l'agent">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-result">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <a href="user-detail.html">
+                            <div class="card card-user">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <div class="card-user-grade">
+                                            <img src="/assets/images/grades/sap-1.svg" alt="" class="user-grade">
+                                        </div>
+                                        <div class="card-user-name">
+                                            <span class="user-name">Bronszewski Ugo</span>
+                                            <span class="user-grade">Sapeur 1<sup>ère</sup> classe</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-8">
+                                        <ul class="card-user-items">
+                                            <li class="card-user-item">
+                                                <span class="item-title">SUAP</span>
+                                                <span class="item-value error">6h/8h</span>
+                                            </li>
+                                            <li class="card-user-item">
+                                                <span class="item-title">DIV/INC</span>
+                                                <span class="item-value">16h/16h</span>
+                                            </li>
+                                            <li class="card-user-item">
+                                                <span class="item-title">SR</span>
+                                                <span class="item-value error">3h/4h</span>
+                                            </li>
+                                            <li class="card-user-item">
+                                                <span class="item-title">AUTRES</span>
+                                                <span class="item-value">0h</span>
+                                            </li>
+                                            <li class="card-user-item">
+                                                <span class="badge badge-error">Non validé</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <script>
+            feather.replace()
+        </script>
+    </body>
+</html>

@@ -1,0 +1,43 @@
+@import 'bourbon/bourbon';
+
+// Variables
+$font-size: 12px !default;
+$navbarHeight: 80px;
+
+// Colors
+$white: #ffffff !default;
+$black: #000000 !default;
+$red: #ff2323;
+$blue: #0d95b1;
+
+$color: #383838 !default;
+$primary: #2a2a3a;
+
+$shades: 30%, 50%, 60%;
+$radius: 5px !default;
+
+// Fonctions
+@import "mixins/functions";
+
+// Base
+@import "base/reset";
+@import "base/body";
+@import "base/typo";
+@import "base/navbar";
+@import "base/form";
+//@import "base/btn";
+//@import "base/footer";
+
+// Layout
+
+
+// Modules
+//@import "modules/loader";
+@import "modules/card";
+@import "modules/badge";
+//@import "modules/header";
+@import "modules/section";
+//@import "modules/slider";
+//@import "modules/login";
+//@import "modules/modal";
+

@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,400i');
+
+h1, h2, h3,
+h4, h5, h6
+.h1, .h2, .h3,
+.h4, .h5, .h6 {
+  //margin-bottom: 1.2rem;
+  color: $color;
+  line-height: 1.29;
+  letter-spacing: 2px;
+  //text-transform: uppercase;
+
+  &.h-primary {
+    color: $primary;
+  }
+
+  &.h-white {
+    color: $white;
+  }
+}
+
+h1, .h1, .display-1 {
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+h2, .h2, .display-2 {
+  font-size: 3rem;
+  font-weight: 800;
+}
+
+h3, .h3, .display-3 {
+  font-size: 2.2rem;
+  font-weight: 800;
+}
+
+h4, .h4, .display-4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+h5, .h5 {
+}
+
+h6, .h6 {
+}
+
+small, .small {
+  font-size: 1em;
+}
+
+.text-muted {
+  color: rgba($black, 0.5);
+}
+
+.lead {
+  color: rgba($black, 0.75);
+  font-size: 1.5rem;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 2;
+  text-align: justify;
+
+  & mark, & .mark {
+    padding: rem-calc(5) rem-calc(2);
+  }
+}
+
+a {
+  color: $primary;
+  text-decoration: none;
+
+  &.underline {
+    padding-bottom: 2px;
+    border-bottom: 2px solid $primary;
+  }
+}
+
+ul {
+  display: block;
+  margin-top: 0;
+  padding-left: 40px;
+  line-height: 2;
+  list-style-type: disc;
+
+  &.list-unstyled {
+    padding-left: 0;
+    list-style: none;
+  }
+
+  &.list-inline {
+    padding-left: 0;
+    list-style: none;
+
+    & li {
+      display: inline-block;
+
+      &:not(:last-child) {
+        margin-right: .5rem;
+      }
+    }
+  }
+
+  & ul, & ol {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    list-style-type: circle;
+  }
+}
+
+li {
+  display: list-item;
+}
+
+mark, .mark {
+  color: $white;
+  background-color: $primary;
+  padding: rem-calc(10) rem-calc(15);
+}
+
+del, ins, em {
+  font-style: italic;
+}
+
+b, strong {
+  font-weight: 700;
+}
+
+sup {
+  vertical-align: super;
+  font-size: smaller;
+}

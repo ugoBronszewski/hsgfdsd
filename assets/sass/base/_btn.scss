@@ -1,0 +1,60 @@
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  color: $white;
+  font-style: normal;
+  background-color: $black;
+  border: none;
+  outline: none;
+
+  &:hover {
+    background-color: rgba($black, .9);
+    text-decoration: none;
+  }
+
+  &-nobg {
+    background-color: transparent;
+
+    &:hover {
+      background-color: transparent;
+    }
+  }
+
+  &-primary, &-accent {
+    padding: 6px 15px;
+    color: #fff;
+    border-radius: 50px;
+  }
+
+  &-primary {
+    background-color: $primary-color;
+
+    &:hover {
+      background-color: rgba($primary-color, .9);
+    }
+  }
+
+  &-accent {
+    background-color: $accent-color;
+
+    &:hover {
+      background-color: rgba($accent-color, .9);
+    }
+  }
+
+  &-small {
+    display: initial;
+    padding: 5px 12px;
+    font-size: 12px;
+    border-radius: 20px;
+  }
+
+  &-medium {
+    margin: 75px 0;
+    font-size: 1.4rem;
+  }
+
+  &.h3 {
+    line-height: 2.3;
+  }
+}

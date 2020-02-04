@@ -1,0 +1,59 @@
+@function trim-unit($value) {
+  @return $value / ($value * 0 + 1)
+}
+
+@function rem-calc($value) {
+  @return $value / trim-unit($font-size) * 1rem
+}
+
+@mixin mediaQuery($canvas) {
+  @if $canvas == sd {
+    @media only screen and (min-width: 576px) { @content; }
+  }
+  @else if $canvas == md {
+    @media only screen and (min-width: 768px) { @content; }
+  }
+  @else if $canvas == ld {
+    @media only screen and (min-width: 992px) { @content; }
+  }
+}
+
+@mixin maxMediaQuery($canvas) {
+  @if $canvas == sd {
+    @media only screen and (max-width: 576px) { @content; }
+  }
+  @else if $canvas == md {
+    @media only screen and (max-width: 768px) { @content; }
+  }
+  @else if $canvas == ld {
+    @media only screen and (max-width: 992px) { @content; }
+  }
+}
+
+@mixin hover {
+  &:hover { @content; }
+}
+
+@mixin hover-focus {
+  &:hover,
+  &:focus {
+    @content;
+  }
+}
+
+@mixin hover-focus-active {
+  &:hover,
+  &:focus,
+  &:active {
+    @content;
+  }
+}
+
+@mixin plain-hover-focus-active {
+  &,
+  &:hover,
+  &:focus,
+  &:active {
+    @content;
+  }
+}

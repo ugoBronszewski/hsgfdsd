@@ -1,0 +1,154 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    color: $color !important;
+    font-size: $font-size !important;
+    font-family: 'Google Sans', sans-serif !important;
+    background-color: $primary !important;
+
+    &#body-index {
+        padding-top: calc(50vh - 108px);
+        background-image: url('/assets/images/FormaRecap-bg.png');
+        background-size: cover;
+        background-position: center;
+
+        .clearfix {
+            margin-top: calc(50vh - 108px);
+        }
+
+        .logo {
+            width: 520px;
+            height: 108px;
+        }
+
+        .card-deck {
+            margin-top: 100px;
+        }
+    }
+}
+
+hr {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    margin-left: 0;
+    width: 16.6666%;
+    border: 2px solid $black;
+}
+
+.row-big {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+[data-tooltip] {
+    cursor: pointer;
+    position: relative;
+
+    &:before {
+    //&:before, &:after {
+        position: absolute;
+        visibility: hidden;
+        opacity: 0;
+        pointer-events: none;
+        transition: all .15s cubic-bezier(.5, 1, .25, 1);
+        z-index: 1;
+    }
+
+    &:before {
+        padding: 5px;
+        width: 110px;
+        border-radius: 3px;
+        background: #000;
+        color: #fff;
+        content: attr(data-tooltip);
+        text-align: center;
+        font-size: 14px;
+        font-weight: normal;
+        line-height: 1.2;
+    }
+
+    //&:after {
+    //    border: 8px solid transparent;
+    //    width: 0;
+    //    content: "";
+    //    font-size: 0;
+    //    line-height: 0;
+    //}
+
+    &:hover:before {
+    //&:hover:before, &:hover:after {
+        visibility: visible;
+        opacity: 1;
+        animation: timeout 2s;
+    }
+
+    &.t-top {
+        &:before {
+            bottom: 46px;
+            left: 50%;
+            margin-bottom: 5px;
+            transform: translateX(-50%);
+        }
+
+        //&:after {
+        //    bottom: 41px;
+        //    left: 50%;
+        //    transform: translateX(-50%);
+        //    border-top: 8px solid #000;
+        //    border-bottom: none;
+        //}
+
+        &:hover:before {
+        //&:hover:before, &:hover:after {
+            transform: translateX(-50%) translateY(-5px);
+        }
+    }
+}
+
+
+/********** Default Behavior **********/
+
+/********** Timeout Variant **********/
+@keyframes timeout {
+    0% {
+        opacity: 1;
+        visibility: visible;
+     }
+
+    99% {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+
+@keyframes scroll-down {
+    0% {
+        @include transform(translateY(0));
+    }
+
+    10% {
+        @include transform(translateY(5px));
+    }
+
+    20% {
+        @include transform(translateY(0));
+    }
+
+    100% {
+        @include transform(translateY(0));
+    }
+}
+
